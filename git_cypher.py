@@ -36,9 +36,9 @@ print(postCypher)
 outCypher=""
 for i in range(len(postCypher)):
     outCypher+=postCypher[i]
-    if(i+1%50==0):
+    if((i+1)%50==0):
         outCypher+="\n"
-    elif(i+1%5==0):
+    elif((i+1)%5==0):
         outCypher+=" "
 print(outCypher)
 
