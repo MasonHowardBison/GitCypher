@@ -25,13 +25,16 @@ for line in preCypher:
 singleText=singleText.upper()
 
 #Assigning first argument (besides the file being run) to the var key.
-key=sys.argv[1]
+try:
+    key=sys.argv[1]
+except:
+    raise ValueError("Key is a required parameter.")
 #Converting key to an int
 key=int(key)
 
 #Key must be between 0 and 25.
 if(key<0 or key>25):
-    raise ValueError("Key must be between 0 and 25.")
+    raise ValueError("Key must be a number between 0 and 25.")
 
 
 postCypher=""
